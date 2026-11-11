@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Simposio Académico ¿Qué pagamos y por qué? 12 de noviembre, 16:00 h, Auditorio EP Ingeniería Ambiental">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061223"/>
+      <stop offset="0.55" stop-color="#0a1c33"/>
+      <stop offset="1" stop-color="#050e1c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.12" r="0.62">
+      <stop offset="0" stop-color="#d9b559" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#d9b559" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d58c"/>
+      <stop offset="0.5" stop-color="#d9b559"/>
+      <stop offset="1" stop-color="#a8842f"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- marco dorado -->
+  <rect x="40" y="40" width="1520" height="920" fill="none" stroke="url(#gold)" stroke-opacity="0.5" stroke-width="2"/>
+  <rect x="56" y="56" width="1488" height="888" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+
+  <!-- arcos decorativos -->
+  <g fill="none" stroke="url(#gold)" stroke-opacity="0.22" stroke-width="1.5">
+    <circle cx="1450" cy="140" r="130"/>
+    <circle cx="1450" cy="140" r="186"/>
+    <circle cx="1450" cy="140" r="242"/>
+  </g>
+  <circle cx="1450" cy="140" r="9" fill="url(#gold)" opacity="0.75"/>
+
+  <!-- cabecera -->
+  <g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+    <text x="800" y="235" fill="#f0d58c" font-size="34" letter-spacing="14" font-weight="700">IV ANIVERSARIO · EPCO</text>
+    <line x1="640" y1="275" x2="960" y2="275" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+
+  <!-- titulo -->
+  <text x="800" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="132" font-weight="700" fill="#ffffff" letter-spacing="2">SIMPOSIO ACADÉMICO</text>
+
+  <text x="800" y="540" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="62" font-style="italic" fill="url(#gold)">¿Qué pagamos y por qué?</text>
+
+  <!-- divisor -->
+  <g stroke="url(#gold)" stroke-opacity="0.6" stroke-width="2">
+    <line x1="470" y1="612" x2="700" y2="612"/>
+    <line x1="900" y1="612" x2="1130" y2="612"/>
+  </g>
+  <path d="M800 596l9 16-9 16-9-16z" fill="url(#gold)" opacity="0.9"/>
+
+  <!-- datos -->
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="700" fill="#ffffff" font-size="46" font-weight="700" letter-spacing="1">JUEVES 12 DE NOVIEMBRE · 16:00 h</text>
+    <text x="800" y="756" fill="#9aabc3" font-size="34" letter-spacing="0.5">Auditorio de la Escuela Profesional de Ingeniería Ambiental</text>
+    <text x="800" y="806" fill="#9aabc3" font-size="30" letter-spacing="0.5">UNAM Filial Ilo · Moquegua</text>
+  </g>
+
+  <!-- pie -->
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="898" fill="#f0d58c" font-size="24" letter-spacing="6" opacity="0.85">ESCUELA PROFESIONAL DE CONTABILIDAD</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 104" role="img" aria-label="Yumi Sweet Repostería">
+  <circle cx="52" cy="52" r="24" fill="none" stroke="#d9b559" stroke-opacity="0.45" />
+  <path d="M52 34c6 6 6 14 0 20-6-6-6-14 0-20z" fill="#d9b559" fill-opacity="0.55" />
+  <path d="M52 44c8-1 14 3 16 10-8 2-14-2-16-10z" fill="#f0d58c" fill-opacity="0.4" />
+  <text x="88" y="52" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#f7f2e6">Yumi</text>
+  <text x="152" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="600" fill="#d9b559">Sweet</text>
+  <text x="88" y="74" font-family="Helvetica, Arial, sans-serif" font-size="8.5" letter-spacing="5.5" fill="#9aabc3">REPOSTERÍA</text>
+  <line x1="88" y1="84" x2="236" y2="84" stroke="#d9b559" stroke-opacity="0.25" />
+</svg>
