@@ -40,7 +40,18 @@ archivo con la foto real **manteniendo el mismo nombre** (JPG, apaisado, ~1600 p
 | `act-saber.jpg` | Saber Contable |
 | `act-feria.jpg` | Feria de Emprendimiento y R.S. |
 | `act-dia-central.jpg` | Día Central |
-| `gal-*.jpg` | Galería (8 fotografías) |
+| `director.jpg` | Retrato del Dr. Jorge Jinchuña Huallpa (mensaje institucional) |
+| `gal-*.jpg` | Galería (8 fotografías referenciales) |
+| `gal-talento-1.jpg` | Galería · Conta Tiene Talento, canto en vivo |
+| `gal-talento-2.jpg` | Galería · Conta Tiene Talento, danza de tijeras |
+| `gal-talento-3.jpg` | Galería · Conta Tiene Talento, coreografía grupal |
+| `gal-miss-1.jpg` | Galería · Miss & Mister, pasarela |
+| `gal-miss-2.jpg` | Galería · Miss & Mister, público y porras |
+
+Las seis últimas y el retrato del director están ya maquetados: en cuanto el archivo existe en
+`assets/img/` con ese nombre, la foto aparece sola en la web (si falta, la tarjeta se oculta y no
+queda ningún ícono roto). Las fotos deben ser JPG apaisadas de al menos 1200 px de ancho; el
+retrato, vertical y centrado en el rostro.
 
 Si una foto nueva tiene otro nombre o formato, ajusta la ruta en `index.html` (galería y hero) o
 en el arreglo `EVENTS` de `assets/js/app.js` (actividades).

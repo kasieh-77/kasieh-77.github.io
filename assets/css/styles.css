@@ -1119,6 +1119,44 @@ kbd {
 .contact-list a:hover { color: var(--gold); }
 .contact-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; line-height: 1.6; color: var(--muted); }
 
+/* ---------- 12b. Retrato del director ---------- */
+.signature-photo {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(150deg, #0d2340, #061223);
+  border: 1px solid rgba(217, 181, 89, 0.55);
+  box-shadow: 0 10px 26px rgba(5, 14, 28, 0.22);
+}
+.signature-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.signature-photo.is-fallback img { opacity: 0; }
+.signature-initials {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+@media (max-width: 560px) {
+  .signature-photo { width: 72px; height: 72px; }
+  .signature-initials { font-size: 1.2rem; }
+}
+
+/* Fotos aún sin archivo: no se muestran hasta que exista la imagen */
+.gallery-item.is-pending { display: none; }
+
 /* ---------- 13b. Auspiciadores ---------- */
 .sponsors { position: relative; }
 .sponsor-grid {

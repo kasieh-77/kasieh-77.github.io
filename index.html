@@ -223,7 +223,13 @@
           científica y tecnológica; con principios y valores éticos y responsabilidad social.
         </p>
         <div class="signature">
-          <span class="signature-line" aria-hidden="true"></span>
+          <figure class="signature-photo" id="directorPhoto">
+            <img src="assets/img/director.jpg"
+                 alt="Dr. Jorge Jinchuña Huallpa, Director de la Escuela Profesional de Contabilidad"
+                 loading="lazy" decoding="async"
+                 onerror="document.getElementById('directorPhoto').classList.add('is-fallback')" />
+            <span class="signature-initials" aria-hidden="true">JJH</span>
+          </figure>
           <div>
             <strong>Dr. Jorge Jinchuña Huallpa</strong>
             <small>Director de la Escuela Profesional de Contabilidad</small>
@@ -238,7 +244,7 @@
           <span class="stat-note">Cuatro ediciones construyendo identidad.</span>
         </div>
         <div class="stat reveal" style="--d:.12s">
-          <span class="stat-num" data-count="7">0</span>
+          <span class="stat-num" data-count="8">0</span>
           <span class="stat-label">Actividades oficiales</span>
           <span class="stat-note">Del 29 de octubre al 29 de noviembre.</span>
         </div>
@@ -410,6 +416,38 @@
       <button class="gallery-item reveal" style="--d:.3s" type="button" data-full="assets/img/gal-reconocimientos.jpg" data-caption="Entrega de reconocimientos · Aniversario EPCO">
         <img src="assets/img/gal-reconocimientos.jpg" alt="Entrega de reconocimientos en ceremonia académica" loading="lazy" />
         <span class="gallery-cap"><small>Ceremonia</small> Reconocimientos</span>
+      </button>
+
+      <!-- Fotos reales del aniversario: aparecen solas en cuanto los archivos existen en assets/img/ -->
+      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-1.jpg" data-caption="Conta Tiene Talento · Canto en vivo">
+        <img src="assets/img/gal-talento-1.jpg" alt="Estudiante cantando en el escenario de Conta Tiene Talento" loading="lazy"
+             onload="this.closest('.gallery-item').classList.remove('is-pending')"
+             onerror="this.closest('.gallery-item').remove()" />
+        <span class="gallery-cap"><small>Conta Tiene Talento</small> Canto en vivo</span>
+      </button>
+      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-2.jpg" data-caption="Conta Tiene Talento · Danza de tijeras">
+        <img src="assets/img/gal-talento-2.jpg" alt="Danzantes de tijeras sobre el escenario" loading="lazy"
+             onload="this.closest('.gallery-item').classList.remove('is-pending')"
+             onerror="this.closest('.gallery-item').remove()" />
+        <span class="gallery-cap"><small>Conta Tiene Talento</small> Danza de tijeras</span>
+      </button>
+      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-3.jpg" data-caption="Conta Tiene Talento · Coreografía grupal">
+        <img src="assets/img/gal-talento-3.jpg" alt="Grupo de estudiantes bailando en el escenario" loading="lazy"
+             onload="this.closest('.gallery-item').classList.remove('is-pending')"
+             onerror="this.closest('.gallery-item').remove()" />
+        <span class="gallery-cap"><small>Conta Tiene Talento</small> Coreografía grupal</span>
+      </button>
+      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-miss-1.jpg" data-caption="Miss &amp; Mister Contabilidad · Pasarela">
+        <img src="assets/img/gal-miss-1.jpg" alt="Candidatas en la pasarela del Miss y Mister Contabilidad" loading="lazy"
+             onload="this.closest('.gallery-item').classList.remove('is-pending')"
+             onerror="this.closest('.gallery-item').remove()" />
+        <span class="gallery-cap"><small>Miss &amp; Mister</small> Pasarela</span>
+      </button>
+      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-miss-2.jpg" data-caption="Miss &amp; Mister Contabilidad · Público y porras">
+        <img src="assets/img/gal-miss-2.jpg" alt="Público y barras alentando en el Miss y Mister" loading="lazy"
+             onload="this.closest('.gallery-item').classList.remove('is-pending')"
+             onerror="this.closest('.gallery-item').remove()" />
+        <span class="gallery-cap"><small>Miss &amp; Mister</small> Público y porras</span>
       </button>
     </div>
   </div>
