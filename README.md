@@ -1,7 +1,7 @@
 # IV Aniversario EPCO 2026
 
 Sitio web del **IV Aniversario de la Escuela Profesional de Contabilidad — UNAM Filial Ilo**.
-Programa oficial del 29 de octubre al 29 de noviembre de 2026 (8 actividades), con cuentas regresivas en vivo.
+Programa oficial del 29 de octubre al 29 de noviembre de 2026 (9 actividades), con cuentas regresivas en vivo.
 
 Sitio estático (HTML + CSS + JavaScript, sin dependencias ni build), listo para GitHub Pages.
 
@@ -35,18 +35,25 @@ archivo con la foto real **manteniendo el mismo nombre** (JPG, apaisado, ~1600 p
 | `act-crimen.jpg` | Seminario de Crimen Contable |
 | `act-miss-mister.jpg` | Miss & Mister Monkey Beach |
 | `act-talento.jpg` | Conta Tiene Talento |
-| `act-simposio.svg` | Simposio Académico: ¿Qué pagamos y por qué? |
-| `act-cadecis.jpg` | II CADECIS |
+| `act-simposio.jpg` | Simposio Académico: ¿Qué pagamos y por qué? |
+| `act-cadecis.jpg` | Campeonato Interno · Fulbito y Vóley (20 nov) |
 | `act-saber.jpg` | Saber Contable |
 | `act-feria.jpg` | Feria de Emprendimiento y R.S. |
-| `act-dia-central.jpg` | Día Central |
+| `act-dia-central.jpg` | Día Central y Sesión Solemne (27 nov) |
+| `act-desfile.jpg` | Desfile Institucional (29 nov) |
 | `director.jpg` | Retrato del Dr. Jorge Jinchuña Huallpa (mensaje institucional) |
-| `gal-*.jpg` | Galería (8 fotografías referenciales) |
-| `gal-talento-1.jpg` | Galería · Conta Tiene Talento, canto en vivo (foto real) |
-| `gal-talento-2.jpg` | Galería · Conta Tiene Talento, danza en el escenario (foto real) |
-| `gal-talento-3.jpg` | Galería · Conta Tiene Talento, primer plano de canto (foto real) |
-| `gal-miss-1.jpg` | Galería · Miss & Mister, pasarela (pendiente) |
-| `gal-miss-2.jpg` | Galería · Miss & Mister, público y porras (pendiente) |
+| `gal-desfile.jpg` | Galería · Desfile institucional |
+| `gal-ceremonia.jpg` | Galería · Ceremonia central y reconocimientos |
+| `gal-pabellon.jpg` | Galería · Pabellón EPCO |
+| `gal-cadecis.jpg` | Galería · Campeonato CADECIS |
+| `gal-feria.jpg` | Galería · Feria de emprendimiento |
+| `gal-simposio.jpg` | Galería · Simposio en el auditorio |
+| `gal-talento-1.jpg` | Galería · Conta Tiene Talento, canto en vivo |
+| `gal-talento-2.jpg` | Galería · Conta Tiene Talento, danza en el escenario |
+| `gal-talento-3.jpg` | Galería · Conta Tiene Talento, primer plano de canto |
+| `gal-miss-1.jpg` | Galería · Miss & Mister, ganadores |
+| `gal-miss-2.jpg` | Galería · Miss & Mister, público y porras |
+| `gal-miss-3.jpg` | Galería · Miss & Mister, el jurado |
 
 Las fotos pendientes y el retrato del director están ya maquetados: en cuanto el archivo existe en
 `assets/img/` con ese nombre, la foto aparece sola en la web (si falta, la tarjeta se oculta y no
