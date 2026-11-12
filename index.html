@@ -381,7 +381,7 @@
     <header class="section-head reveal">
       <p class="eyebrow eyebrow--dark"><span class="eyebrow-line"></span>Memoria</p>
       <h2>Así se vivió <em>el aniversario</em></h2>
-      <p class="section-sub">Imágenes referenciales de las ediciones anteriores. Toca una fotografía para ampliarla.</p>
+      <p class="section-sub">Momentos del IV Aniversario y de ediciones anteriores. Toca una fotografía para ampliarla.</p>
     </header>
 
     <div class="gallery">
@@ -418,38 +418,37 @@
         <span class="gallery-cap"><small>Ceremonia</small> Reconocimientos</span>
       </button>
 
-      <!-- Fotos reales del aniversario: aparecen solas en cuanto los archivos existen en assets/img/ -->
-      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-1.jpg" data-caption="Conta Tiene Talento · Canto en vivo">
-        <img src="assets/img/gal-talento-1.jpg" alt="Estudiante cantando en el escenario de Conta Tiene Talento" loading="lazy"
-             onload="this.closest('.gallery-item').classList.remove('is-pending')"
-             onerror="this.closest('.gallery-item').remove()" />
+      <!-- Fotos reales de las actividades (las pendientes aparecen solas cuando el archivo existe) -->
+      <button class="gallery-item gallery-item--wide reveal" type="button" data-activity="conta-talento" data-full="assets/img/gal-talento-1.jpg" data-caption="Conta Tiene Talento · Canto en vivo">
+        <img src="assets/img/gal-talento-1.jpg" alt="Estudiante cantando frente a la pantalla de Conta Tiene Talento, con el jurado en primera fila" loading="lazy" />
         <span class="gallery-cap"><small>Conta Tiene Talento</small> Canto en vivo</span>
       </button>
-      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-2.jpg" data-caption="Conta Tiene Talento · Danza de tijeras">
-        <img src="assets/img/gal-talento-2.jpg" alt="Danzantes de tijeras sobre el escenario" loading="lazy"
-             onload="this.closest('.gallery-item').classList.remove('is-pending')"
-             onerror="this.closest('.gallery-item').remove()" />
-        <span class="gallery-cap"><small>Conta Tiene Talento</small> Danza de tijeras</span>
+      <button class="gallery-item reveal" type="button" data-activity="conta-talento" data-full="assets/img/gal-talento-2.jpg" data-caption="Conta Tiene Talento · Danza en el escenario">
+        <img src="assets/img/gal-talento-2.jpg" alt="Tres estudiantes bailando una danza tradicional en el escenario" loading="lazy" />
+        <span class="gallery-cap"><small>Conta Tiene Talento</small> Danza en el escenario</span>
       </button>
-      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-talento-3.jpg" data-caption="Conta Tiene Talento · Coreografía grupal">
-        <img src="assets/img/gal-talento-3.jpg" alt="Grupo de estudiantes bailando en el escenario" loading="lazy"
-             onload="this.closest('.gallery-item').classList.remove('is-pending')"
-             onerror="this.closest('.gallery-item').remove()" />
-        <span class="gallery-cap"><small>Conta Tiene Talento</small> Coreografía grupal</span>
+      <button class="gallery-item reveal" type="button" data-activity="conta-talento" data-full="assets/img/gal-talento-3.jpg" data-caption="Conta Tiene Talento · Categoría canto">
+        <img src="assets/img/gal-talento-3.jpg" alt="Primer plano de una estudiante cantando en Conta Tiene Talento" loading="lazy" />
+        <span class="gallery-cap"><small>Conta Tiene Talento</small> Categoría canto</span>
       </button>
-      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-miss-1.jpg" data-caption="Miss &amp; Mister Contabilidad · Pasarela">
+      <button class="gallery-item is-pending reveal" type="button" data-activity="miss-mister" data-full="assets/img/gal-miss-1.jpg" data-caption="Miss &amp; Mister Contabilidad · Pasarela">
         <img src="assets/img/gal-miss-1.jpg" alt="Candidatas en la pasarela del Miss y Mister Contabilidad" loading="lazy"
              onload="this.closest('.gallery-item').classList.remove('is-pending')"
              onerror="this.closest('.gallery-item').remove()" />
         <span class="gallery-cap"><small>Miss &amp; Mister</small> Pasarela</span>
       </button>
-      <button class="gallery-item is-pending reveal" type="button" data-full="assets/img/gal-miss-2.jpg" data-caption="Miss &amp; Mister Contabilidad · Público y porras">
+      <button class="gallery-item is-pending reveal" type="button" data-activity="miss-mister" data-full="assets/img/gal-miss-2.jpg" data-caption="Miss &amp; Mister Contabilidad · Público y porras">
         <img src="assets/img/gal-miss-2.jpg" alt="Público y barras alentando en el Miss y Mister" loading="lazy"
              onload="this.closest('.gallery-item').classList.remove('is-pending')"
              onerror="this.closest('.gallery-item').remove()" />
         <span class="gallery-cap"><small>Miss &amp; Mister</small> Público y porras</span>
       </button>
     </div>
+
+    <p class="gallery-note" id="galleryNote" hidden>
+      <span id="galleryNoteText"></span>
+      <button type="button" id="galleryReset">Ver todas las fotos</button>
+    </p>
   </div>
 </section>
 

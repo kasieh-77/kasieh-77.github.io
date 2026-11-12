@@ -1156,6 +1156,32 @@ kbd {
 
 /* Fotos aún sin archivo: no se muestran hasta que exista la imagen */
 .gallery-item.is-pending { display: none; }
+.gallery-item.is-filtered-out { display: none; }
+.gallery-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 12px 18px;
+  border: 1px dashed rgba(5, 14, 28, 0.22);
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft, #4a5c72);
+  text-align: center;
+}
+.gallery-note[hidden] { display: none; }
+.gallery-note button {
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-dark, #a8842f);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
 
 /* ---------- 13b. Auspiciadores ---------- */
 .sponsors { position: relative; }
@@ -1332,6 +1358,8 @@ kbd {
   .about-grid { grid-template-columns: 1fr; }
 }
 
+.mobile-menu { display: none; }
+
 @media (max-width: 860px) {
   .nav-links { display: none; }
   .nav-cta { display: none; }
@@ -1356,8 +1384,9 @@ kbd {
     z-index: 110;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 90px clamp(24px, 8vw, 60px) 40px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: calc(var(--nav-h) + 118px) clamp(24px, 8vw, 60px) 48px;
     background:
       radial-gradient(90% 70% at 80% 10%, rgba(217, 181, 89, 0.14), transparent 60%),
       linear-gradient(160deg, #071427, #050e1c);
@@ -1367,6 +1396,16 @@ kbd {
     transition: opacity 0.35s var(--ease), visibility 0.35s, transform 0.45s var(--ease);
   }
   .mobile-menu.is-open { opacity: 1; visibility: visible; transform: none; }
+
+  /* Con el menú abierto la cabecera deja visible solo el botón de cierre */
+  body.menu-open .brand-text,
+  body.menu-open .nav-cta,
+  body.menu-open .topbar {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s;
+  }
   .mobile-menu ul { display: flex; flex-direction: column; gap: 4px; }
   .mobile-menu a {
     display: flex;

@@ -42,13 +42,13 @@ archivo con la foto real **manteniendo el mismo nombre** (JPG, apaisado, ~1600 p
 | `act-dia-central.jpg` | Día Central |
 | `director.jpg` | Retrato del Dr. Jorge Jinchuña Huallpa (mensaje institucional) |
 | `gal-*.jpg` | Galería (8 fotografías referenciales) |
-| `gal-talento-1.jpg` | Galería · Conta Tiene Talento, canto en vivo |
-| `gal-talento-2.jpg` | Galería · Conta Tiene Talento, danza de tijeras |
-| `gal-talento-3.jpg` | Galería · Conta Tiene Talento, coreografía grupal |
-| `gal-miss-1.jpg` | Galería · Miss & Mister, pasarela |
-| `gal-miss-2.jpg` | Galería · Miss & Mister, público y porras |
+| `gal-talento-1.jpg` | Galería · Conta Tiene Talento, canto en vivo (foto real) |
+| `gal-talento-2.jpg` | Galería · Conta Tiene Talento, danza en el escenario (foto real) |
+| `gal-talento-3.jpg` | Galería · Conta Tiene Talento, primer plano de canto (foto real) |
+| `gal-miss-1.jpg` | Galería · Miss & Mister, pasarela (pendiente) |
+| `gal-miss-2.jpg` | Galería · Miss & Mister, público y porras (pendiente) |
 
-Las seis últimas y el retrato del director están ya maquetados: en cuanto el archivo existe en
+Las fotos pendientes y el retrato del director están ya maquetados: en cuanto el archivo existe en
 `assets/img/` con ese nombre, la foto aparece sola en la web (si falta, la tarjeta se oculta y no
 queda ningún ícono roto). Las fotos deben ser JPG apaisadas de al menos 1200 px de ancho; el
 retrato, vertical y centrado en el rostro.
@@ -90,6 +90,17 @@ usuario en **https://kasieh-77.github.io/**.
 
 La primera vez que se activa Pages hay que hacerlo desde la web de GitHub: no se puede activar
 por línea de comandos sin credenciales.
+
+## Actividades finalizadas
+
+Cuando una actividad ya pasó, su ficha deja de ofrecer la inscripción por WhatsApp y muestra
+solo dos acciones: **Ver galería de esta actividad** (filtra la galería por sus fotos) y
+**Quiero la próxima edición**, que abre un correo a `2024230003@unam.edu.pe` con el asunto y el
+cuerpo ya redactados. La actividad se considera pasada según su fecha de fin, en hora de Perú, sin
+necesidad de tocar código.
+
+Para que una foto aparezca en el filtro de una actividad, la tarjeta de la galería debe llevar
+`data-activity="id-de-la-actividad"` (por ejemplo `conta-talento` o `miss-mister`).
 
 ## Funciones
 

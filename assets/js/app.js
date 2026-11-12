@@ -342,6 +342,7 @@
   function detailTemplate(ev) {
     const status = statusOf(ev);
     const statusLabel = status === "past" ? "Finalizada" : status === "live" ? "En curso" : "Próximamente";
+    const isPast = status === "past";
     const mapQuery = encodeURIComponent(`${ev.place}, ${ev.address}`);
     return `
       <div class="detail-media">
@@ -382,6 +383,15 @@
         </p>
 
         <div class="detail-actions">
+          ${isPast ? `
+          <a class="btn btn-gold" href="#galeria" data-gallery-for="${ev.id}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg>
+            <span>Ver galería de esta actividad</span>
+          </a>
+          <a class="btn btn-line" href="${nextEditionMail(ev)}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span>Quiero la próxima edición</span>
+          </a>` : `
           <a class="btn btn-wa" href="${waLink(ev.wa)}" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true" style="fill:currentColor;stroke:none"><path d="M20.5 3.5A11 11 0 0 0 3.4 17L2 22l5.2-1.4A11 11 0 0 0 20.5 3.5z"/></svg>
             <span>Inscribirme</span>
@@ -393,7 +403,7 @@
           <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=${mapQuery}" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span>Ubicación</span>
-          </a>
+          </a>`}
         </div>
       </div>
     `;
@@ -617,6 +627,7 @@
       menu.setAttribute("aria-hidden", "true");
       burger.setAttribute("aria-expanded", "false");
       burger.setAttribute("aria-label", "Abrir menú");
+      document.body.classList.remove("menu-open");
       document.body.style.overflow = "";
     };
 
@@ -629,6 +640,7 @@
           menu.setAttribute("aria-hidden", "false");
           burger.setAttribute("aria-expanded", "true");
           burger.setAttribute("aria-label", "Cerrar menú");
+          document.body.classList.add("menu-open");
           document.body.style.overflow = "hidden";
         }
       });
@@ -799,7 +811,69 @@
   /* ------------------------------------------------------------
      10. Compartir / imprimir / salto a evento
      ------------------------------------------------------------ */
+  /* ------------------------------------------------------------
+     Galería filtrada por actividad
+     ------------------------------------------------------------ */
+  function nextEditionMail(ev) {
+    const subject = `Quiero participar en la próxima edición · ${ev.title}`;
+    const body = [
+      "Hola, buenas tardes.",
+      "",
+      `Les escribo porque no pude participar en "${ev.title}" de esta edición del IV Aniversario de la Escuela Profesional de Contabilidad.`,
+      "Me gustaría que me consideren para la siguiente edición (2027) y que me informen cuando abran las inscripciones.",
+      "",
+      "Nombre y apellidos: ",
+      "Ciclo / condición (estudiante, docente, egresado): ",
+      "Teléfono de contacto: ",
+      "",
+      "Gracias."
+    ].join("\r\n");
+    return `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function galleryItems() {
+    return $$(".gallery-item").filter((item) => !item.classList.contains("is-pending"));
+  }
+
+  function filterGallery(activityId) {
+    const items = galleryItems();
+    const matches = items.filter((item) => item.dataset.activity === activityId);
+    items.forEach((item) => {
+      const hide = matches.length > 0 && item.dataset.activity !== activityId;
+      item.classList.toggle("is-filtered-out", hide);
+    });
+
+    const note = $("#galleryNote");
+    const text = $("#galleryNoteText");
+    if (note && text) {
+      note.hidden = matches.length > 0;
+      text.textContent = matches.length > 0
+        ? `Mostrando ${matches.length} ${matches.length === 1 ? "foto" : "fotos"} de esta actividad.`
+        : "Aún no tenemos fotografías de esta actividad: te mostramos la galería completa.";
+      if (matches.length === 0) note.hidden = false;
+    }
+
+    $("#galeria")?.scrollIntoView?.({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+
+  function resetGalleryFilter() {
+    galleryItems().forEach((item) => item.classList.remove("is-filtered-out"));
+    const note = $("#galleryNote");
+    if (note) note.hidden = true;
+  }
+
   function initActions() {
+    // Acciones de galería generadas dinámicamente en el detalle de cada actividad
+    document.addEventListener("click", (e) => {
+      const go = e.target.closest("[data-gallery-for]");
+      if (go) {
+        e.preventDefault();
+        filterGallery(go.dataset.galleryFor);
+        return;
+      }
+      if (e.target.closest("#galleryReset")) resetGalleryFilter();
+    });
+
     const shareBtn = $("#shareBtn");
     const shareLabel = $("#shareLabel");
     shareBtn?.addEventListener("click", async () => {
